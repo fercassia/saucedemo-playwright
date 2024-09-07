@@ -1,9 +1,11 @@
+Dockerfile
+
+.git
+.dockerignore
+.gitignore
+
 node_modules
 /test-results
 /playwright-report
 /blob-report
 /playwright/.cache/
-Dockerfile
-.git
-.dockerignore
-.gitignore
