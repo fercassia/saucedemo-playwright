@@ -1,5 +1,5 @@
 import { expect, type Page } from '@playwright/test';
-import { LoginPage } from '../pages/LoginObject';
+import { LoginPage } from '../pages/LoginObject.ts';
 
 export class LoginStep {
   readonly page: Page

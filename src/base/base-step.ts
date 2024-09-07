@@ -2,7 +2,7 @@
 POM com instanciação de objetos*/
 
 import {test as base} from "@playwright/test"
-import { LoginStep } from "../steps/LoginSteps"
+import { LoginStep } from "../steps/LoginSteps.ts"
 
 type MyFixtures = {
     loginStep: LoginStep
