@@ -23,7 +23,7 @@ ___Playwright___
 
 __OU__
 
-- Rode o comando para rodar os testes e gerar report na maquina `docker run --rm -v $(pwd):/e2e/src -v $(pwd)/playwright-report:/e2e/src/playwright-report -w /e2e/src tests-container:latest`
+- Rode o comando para rodar os testes e gerar report na maquina `docker run --rm -v $(pwd):/e2e/src -v $(pwd)/playwright-report:/e2e/src/playwright-report -w /e2e/src tests-container:{tag}`
 
 ___Bonus___
 - Clone o projeto `https://github.com/fercassia/saucedemo-playwright`
