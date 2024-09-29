@@ -12,6 +12,8 @@ ___Docker___
 
 > [Fernanda Kipper | Dev. APRENDA DOCKER DO ZERO | TUTORIAL COMPLETO COM DEPLOY. Youtube, Abr. 2024](https://www.youtube.com/watch?v=DdoncfOdru8&t=13s)
 
+> [Onyeanuna, P. Build a Docker Image and Push to Docker Hub: A Quick Guide. EverythingDevOps, Mai. 2024](https://everythingdevops.dev/build-a-docker-image-and-push-to-docker-hub-a-quick-guide/)
+
 ___Playwright___
 > [Pandiyan, P. Running Playwright Tests in a Docker Container Locally and Viewing the Report. Medium, Set. 2024](https://pradappandiyan.medium.com/running-playwright-tests-in-a-docker-container-locally-and-viewing-the-report-2303599246da)
 
@@ -21,7 +23,7 @@ ___Playwright___
 
 __OU__
 
-- Rode o comando para rodar os testes e gerar report na maquina `docker run --rm -v $(pwd):/e2e/src -v $(pwd)/playwright-report:/e2e/src/playwright-report -w /e2e/src tests-container:1.1.0-playwright`
+- Rode o comando para rodar os testes e gerar report na maquina `docker run --rm -v $(pwd):/e2e/src -v $(pwd)/playwright-report:/e2e/src/playwright-report -w /e2e/src tests-container:latest`
 
 ___Bonus___
 - Clone o projeto `https://github.com/fercassia/saucedemo-playwright`
@@ -33,9 +35,9 @@ ___Bonus___
 
 ## Arquitetura
 
-- `src`: Diretório responsável por armazenar arquivos de serviços.
+- `src`: Diretório responsável por armazenar arquivos de Page Objects, Testes, Steps, Base.
     
-- `.gitignore`: Arquivo responsável por armazenar arquivos/diretórios para serem ignorados ao subir para o repositório (p.ex: node_modules).
+- `.gitignore`: Arquivo responsável por indicar arquivos/diretórios para serem ignorados ao subir para o repositório (p.ex: node_modules).
 
 - `.dockerignore`: Arquivo responsável por indicar arquivos/diretorios para serem ignorados ao seri criado um containner daquela imagem.
 
