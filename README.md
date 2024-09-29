@@ -47,7 +47,8 @@ ___Bonus___
 
 - `playwright.config.ts`: Arquivo responsavel por configuração do framework playwright.
 
-## Comandos adicionais
+## Comandos adicionaistag
+- Rode o comando para iniciar o container sem gerar acesso ao report `docker run -d {nomeImagem}:{tag}`
 - Rode o comando para pausar o containner `docker stop {{containerId}}`
 - Rode o comando para iniciar o container já criado `docker start {{containerId}}`
 
