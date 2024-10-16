@@ -2,15 +2,15 @@
 POM com instanciação de objetos*/
 
 import {test as base} from "@playwright/test"
-import { LoginStep } from "../steps/LoginSteps.ts"
+import { LoginPage } from "../pages/LoginObject"
 
 type MyFixtures = {
-    loginStep: LoginStep
+    loginPage: LoginPage
 }
 
 export const test = base.extend<MyFixtures>({
-    loginStep: async ({page}, use) => {
-        await use(new LoginStep(page))
+    loginPage: async ({page}, use) => {
+        await use(new LoginPage(page))
     }
 })
 export {expect} from "@playwright/test"

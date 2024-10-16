@@ -1,42 +1,51 @@
-import { test, expect } from '../base/base-step.ts';
+import { test, expect } from '../base/base.ts';
 
-test.beforeEach(async ({ loginStep }) => {
-  await loginStep.goto();
+test.beforeEach(async ({ loginPage }) => {
+  await loginPage.goto();
 });
 
-test('Login com sucesso', async ({ page, loginStep }) => {
+test('Login com sucesso', async ({ page, loginPage }) => {
   //Arrange
   const username = 'standard_user';
   const password = 'secret_sauce';
   const UrlUserLogado = 'https://www.saucedemo.com/inventory.html'
 
   //Act
-  // await loginStep.goto();
-  await loginStep.login(username, password);
+  await loginPage.typeUsername(username);
+  await loginPage.typePassword(password);
+  await loginPage.clickLoginButton();
 
   //Assert
   await expect(page).toHaveURL(UrlUserLogado);
 });
 
-test('Login sem senha deve retornar erro', async ({ loginStep }) => {
+test('Login sem senha deve retornar erro', async ({ loginPage }) => {
   //Arrange
   const username = 'standard_user';
   const mensagemErroPasswordVazio = 'Epic sadface: Password is required';
   
   //Act and Assert
-  await loginStep.loginSemPassword(username, mensagemErroPasswordVazio);
+  await loginPage.typeUsername(username);
+  await loginPage.clickLoginButton();
+
+  //Assert
+  await loginPage.mensagemErro(mensagemErroPasswordVazio);
 });
 
-test('Login sem username deve retornar erro', async ({ loginStep }) => {
+test('Login sem username deve retornar erro', async ({ loginPage }) => {
   //Arrange
   const password = 'secret_sauce';
   const mensagemErroUsernameVazio = 'Epic sadface: Username is required';
   
-  //Act and Assert
-  await loginStep.loginSemUsername(password, mensagemErroUsernameVazio);
+  //Act
+  await loginPage.typePassword(password);
+  await loginPage.clickLoginButton();
+
+  //Assert
+  await loginPage.mensagemErro(mensagemErroUsernameVazio);
 });
 
-test('Login senha invalida deve retornar erro', async ({ loginStep }) => {
+test('Login senha invalida deve retornar erro', async ({ loginPage }) => {
   
   //Arrange
   const username = 'standard_user'
@@ -44,6 +53,11 @@ test('Login senha invalida deve retornar erro', async ({ loginStep }) => {
   const mensagemErroPasswordIncorreto = 'Epic sadface: Username and password do not match any user in this service';
   
   //Act and Assert
-  await loginStep.loginFalha(username, password,mensagemErroPasswordIncorreto);
+  await loginPage.typeUsername(username);
+  await loginPage.typePassword(password);
+  await loginPage.clickLoginButton();
+
+  //Assert
+  await loginPage.mensagemErro(mensagemErroPasswordIncorreto);
 });
 
