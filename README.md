@@ -27,15 +27,17 @@ __OU__
 
 ___Bonus___
 - Clone o projeto `https://github.com/fercassia/saucedemo-playwright`
+- Rode o comando `npm i` e `npx playwright install`
 - Entre na pasta e divirta-se
 
 ## Tecnologias utilizadas no Desenvolvimento
 
-- Playwright - [1.47.0](https://playwright.dev/)
+- Playwright - [1.48.1](https://playwright.dev/)
+- Node - [20.18.0](https://nodejs.org/en/about/previous-releases)
 
 ## Arquitetura
 
-- `src`: Diretório responsável por armazenar arquivos de Page Objects, Testes, Steps, Base.
+- `src`: Diretório responsável por armazenar arquivos de Page Objects, Testes, Base.
     
 - `.gitignore`: Arquivo responsável por indicar arquivos/diretórios para serem ignorados ao subir para o repositório (p.ex: node_modules).
 

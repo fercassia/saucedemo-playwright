@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test",
-    "test:ui": "playwright test --ui",
+    "exec": "playwright test",
+    "test": "playwright test --ui",
     "test:report": "playwright show-report",
     "test-html-report": "playwright test --browser=all --reporter=html",
     "test-json-report": "PLAYWRIGHT_JSON_OUTPUT_NAME=results.json playwright test --browser=all --reporter=json"
@@ -14,8 +14,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.47.0",
+    "@playwright/test": "^1.48.1",
     "@types/node": "^22.5.4",
-    "playwright": "^1.47.0"
+    "playwright": "^1.48.1"
   }
 }
