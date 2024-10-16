@@ -27,8 +27,8 @@ __OU__
 
 ___Bonus___
 - Clone o projeto `https://github.com/fercassia/saucedemo-playwright`
-- Rode o comando `npm i` e `npx playwright install`
-- Entre na pasta e divirta-se
+- Rode o comando `npm i` e `npx playwright install` na pasta do projeto
+- Divirta-se
 
 ## Tecnologias utilizadas no Desenvolvimento
 
