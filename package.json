@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "exec": "playwright test",
+    "start": "playwright test",
     "test": "playwright test --ui",
     "test:report": "playwright show-report",
     "test-html-report": "playwright test --browser=all --reporter=html",
-    "test-json-report": "PLAYWRIGHT_JSON_OUTPUT_NAME=results.json playwright test --browser=all --reporter=json"
+    "test-json-report": "PLAYWRIGHT_JSON_OUTPUT_NAME=results.json playwright test --browser=all --reporter=json",
+    "clean": "rm -rf playwright-report/ test-results/"
+
   },
   "keywords": [],
   "author": "",

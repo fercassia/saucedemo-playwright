@@ -4,6 +4,8 @@ Dockerfile
 .dockerignore
 .gitignore
 
+README.md
+
 node_modules
 /test-results
 /playwright-report
