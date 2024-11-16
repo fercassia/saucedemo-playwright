@@ -5,9 +5,8 @@ WORKDIR /e2e
 
 COPY package*.json ./ 
 
-RUN npm cache clean --force
-
 RUN npm install
+RUN npm ci --only=production && npm cache clean --force
 
 COPY . .
 
