@@ -1,16 +1,17 @@
-#Base playwright
-FROM mcr.microsoft.com/playwright:v1.48.1-jammy
+FROM node:20.18.2-bullseye
+
+ENV BASE_URL='https://www.saucedemo.com'
 
 WORKDIR /e2e
 
-COPY package*.json ./ 
+COPY package*.json .
+COPY playwright.config.ts .
 
 RUN npm install
-RUN npm ci --only=production && npm cache clean --force
 
-COPY . .
+COPY ./src ./src
 
-ENV BASE_URL='https://www.saucedemo.com'
+RUN npx playwright install --with-deps chromium webkit
 
 CMD ["npm","start"]
 
